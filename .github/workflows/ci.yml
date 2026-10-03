@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  checks:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pytest
+      - name: Compile
+        run: python -m compileall -q elenavid
+      - name: Unit tests
+        run: python -m pytest -q
+      # the parts of the pipeline that need neither a GPU nor ffmpeg
+      - name: Film score and its checks
+        run: |
+          python -m elenavid score --edition film
+          python -m elenavid qa timeline --edition film
+          python -m elenavid qa events --edition film
+      - name: Full opera score and its checks
+        run: |
+          python -m elenavid score --edition full
+          python -m elenavid qa timeline --edition full
+          python -m elenavid qa events --edition full

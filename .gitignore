@@ -1,0 +1,26 @@
+# rendered media and caches: gigabytes, and all of it can be rebuilt from the code
+output/
+*.part
+*.tmp
+
+# the original brief: kept out of the public repository unless its owner chooses to publish it
+sources/
+
+# Python
+__pycache__/
+*.py[cod]
+*.nbi
+*.nbc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+
+# editors and systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

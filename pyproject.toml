@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elenavid"
+version = "1.0.0"
+description = "An opera made entirely in code: libretto, score, five-tier sound design and motion graphics, from a treatment"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+authors = [{ name = "The ElenaVid authors" }]
+keywords = ["opera", "music generation", "sound design", "procedural audio", "motion graphics", "opengl",
+            "glsl", "synthesis", "ffmpeg"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Other Audience",
+    "Natural Language :: English",
+    "Natural Language :: Italian",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Graphics :: 3D Rendering",
+    "Topic :: Multimedia :: Sound/Audio :: Sound Synthesis",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Artistic Software",
+]
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "numba>=0.60",
+    "moderngl>=5.10",
+    "pillow>=10.1",
+]
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.8"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+elenavid = "elenavid.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["elenavid*"]
+
+[tool.setuptools.package-data]
+"elenavid.video" = ["shaders/*.frag", "shaders/*.glsl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
