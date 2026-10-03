@@ -33,7 +33,7 @@ It runs on Windows, macOS and Linux with Python, ffmpeg and an OpenGL 4.3 GPU. A
 ## Quick start
 
 ```bash
-git clone https://github.com/OWNER/ElenaVid.git
+git clone https://github.com/sarcul/ElenaVid.git
 ```
 ```bash
 cd ElenaVid
