@@ -10,7 +10,7 @@ readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
 requires-python = ">=3.12"
-authors = [{ name = "The ElenaVid authors" }]
+authors = [{ name = "CraigStirk" }]
 keywords = ["opera", "music generation", "sound design", "procedural audio", "motion graphics", "opengl",
             "glsl", "synthesis", "ffmpeg"]
 classifiers = [

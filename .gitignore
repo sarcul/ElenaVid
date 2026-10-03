@@ -3,9 +3,6 @@ output/
 *.part
 *.tmp
 
-# the original brief: kept out of the public repository unless its owner chooses to publish it
-sources/
-
 # Python
 __pycache__/
 *.py[cod]
