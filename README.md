@@ -8,11 +8,13 @@
   <img src="docs/images/shot_closeup.jpg" width="32%" alt="The close-up at the climax">
 </p>
 
+<p align="center"><strong><a href="https://www.youtube.com/watch?v=hh0KWWC7654">Watch the ten-minute film on YouTube</a></strong></p>
+
 ## Executive summary
 
 ElenaVid is a Python and GLSL pipeline that turns a written treatment into an opera, and the opera into film. It ships with *Elena*, a *tragedia lirica* in three acts, written from the treatment and synopsis in [`sources/`](sources/), in two editions:
 
-- **The film:** a ten-minute motion-graphics telling.
+- **The film:** a ten-minute motion-graphics telling ([watch on YouTube](https://www.youtube.com/watch?v=hh0KWWC7654)).
 - **The full opera:** the whole work, about two hours, staged in a painted theatre.
 
 Nothing is sampled, filmed or produced by a generative model:
